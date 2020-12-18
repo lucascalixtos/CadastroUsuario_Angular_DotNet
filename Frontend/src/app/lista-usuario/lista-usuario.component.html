@@ -1,0 +1,83 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of Users">
+      <tr>
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.nome}}</td>
+        <td>{{item.sobrenome}}</td>
+        <td>{{item.email}}</td>
+        <td><a (click)="DeleteUser(item.id)">Excluir</a> <a (click)="GetUser(item.id)">  Editar</a> </td>
+      </tr>
+    </tbody>
+</table>
+
+<div class="editContainer" id="edit" style="display: none;">
+<form class="form-horizontal" #editForm="ngForm" (ngSubmit)="EditUser()"  >
+  <fieldset>
+  
+  <!-- Form Name -->
+  <legend>Editar</legend>
+
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="Id">Id</label>  
+    <div class="col-md-4">
+    <input id="Id" [formControl]="Id" ngModel name="Id" type="text" placeholder="Id" class="form-control input-md" disabled>
+      
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="Nome">Nome</label>  
+    <div class="col-md-4">
+    <input id="Nome" [formControl]="Nome" ngModel name="Nome" type="text" placeholder="Nome" class="form-control input-md">
+      
+    </div>
+  </div>
+  <!-- Text input-->
+  <div class="form-group">
+      <label class="col-md-4 control-label" for="Sobrenome">Sobrenome</label>  
+      <div class="col-md-4">
+      <input id="Sobrenome" [formControl]="Sobrenome" ngModel name="Sobrenome" type="text" placeholder="Sobrenome" class="form-control input-md">
+          
+      </div>
+  </div>
+  
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="Email">Email</label>  
+    <div class="col-md-4">
+    <input id="Email" [formControl]="Email" ngModel name="Email" type="email" placeholder="Email" class="form-control input-md">
+      
+    </div>
+  </div>
+  
+  <!-- Password input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="Senha">Senha</label>
+    <div class="col-md-4">
+      <input id="Senha"  [formControl]="Senha" ngModel name="Senha" type="password" placeholder="Senha" class="form-control input-md">
+      
+    </div>
+  </div>
+  
+
+  
+  <!-- Button -->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for=""></label>
+    <div class="col-md-4">
+      <button id="" name="" type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+  </div>
+  
+  </fieldset>
+</form>
+</div>

@@ -1,0 +1,55 @@
+<form class="form-horizontal" #insertForm="ngForm" (ngSubmit)="RegisterUser()">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend>Cadastrar</legend>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Nome">Nome</label>  
+      <div class="col-md-4">
+      <input id="Nome" ngModel name="Nome" type="text" placeholder="Nome" class="form-control input-md">
+        
+      </div>
+    </div>
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="Sobrenome">Sobrenome</label>  
+        <div class="col-md-4">
+        <input id="Sobrenome" ngModel name="Sobrenome" type="text" placeholder="Sobrenome" class="form-control input-md">
+            
+        </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Email">Email</label>  
+      <div class="col-md-4">
+      <input id="Email" ngModel name="Email" type="email" placeholder="Email" class="form-control input-md">
+        
+      </div>
+    </div>
+    
+    <!-- Password input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Senha">Senha</label>
+      <div class="col-md-4">
+        <input id="Senha" ngModel name="Senha" type="password" placeholder="Senha" class="form-control input-md">
+        
+      </div>
+    </div>
+    
+
+    
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for=""></label>
+      <div class="col-md-4">
+        <button id="" name="" type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+    
+    </fieldset>
+    </form>
+    
