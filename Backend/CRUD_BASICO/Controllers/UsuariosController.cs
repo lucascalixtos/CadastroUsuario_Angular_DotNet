@@ -21,6 +21,7 @@ namespace CRUD_BASICO.Controllers
             _context = context;
         }
 
+
         // GET: api/Usuarios
         [HttpGet]
         public IEnumerable<Usuario> GetUsuario()
